@@ -2,8 +2,8 @@ const axios = require("axios")
 
 const baseUrl = "http://api.giphy.com/v1/gifs/";
 const endpoint = "random"
-const requestParameters = "?api_key=surqCofgETenObiK2P63so7eERCCWgnH"
-const resultUrl = baseUrl + endpoint + requestParameters
+const requestQueries = "?api_key=surqCofgETenObiK2P63so7eERCCWgnH"
+const resultUrl = baseUrl + endpoint + requestQueries
 
 
 //1. yöntem
