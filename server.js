@@ -3,7 +3,7 @@ const axios = require("axios")
 
 const server = express()
 
-const port = 8000;
+const port = process.env.PORT || 8000;
 
 const baseUrl = "http://api.giphy.com/v1/gifs/";
 const requestQueries = "?api_key=surqCofgETenObiK2P63so7eERCCWgnH"
