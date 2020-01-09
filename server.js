@@ -17,6 +17,13 @@ server.get("/random", async (request, response, next) => {
   response.end()
 })
 
+server.get("/trending", async (request, response, next) => {
+  const endpoint = "trending"
+  const resultUrl = baseUrl + endpoint + requestQueries
+  const trendingResultGifs = await axios.get(resultUrl)
+  response.send({trending: trendingResultGifs.data.data})
+  response.end()
+})
 
 server.get("/search", async (request, response, next) => {
   const parameters = request.query || {searchKey: ""};
