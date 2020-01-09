@@ -8,6 +8,11 @@ const port = process.env.PORT || 8000;
 const baseUrl = "http://api.giphy.com/v1/gifs/";
 const requestQueries = "?api_key=surqCofgETenObiK2P63so7eERCCWgnH"
 
+server.use(function (req, res, next) {
+  res.header("Access-Control-Allow-Origin", "*");
+  res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+  next();
+});
 
 server.get("/random", async (request, response, next) => {
   const endpoint = "random"
